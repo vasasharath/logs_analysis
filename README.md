@@ -15,21 +15,16 @@ Querying DB through python and generating report
 * launch the VM by running following command
 ```
 vagrant up
-
 ```
 * login to the vm using the command
 
 ```
-
 winpty vagrant ssh
-
 ```
 * cd to /vagrant directory to acces the shared documents
 * create the database using the command 
 ```
-
 psql -d news -f newsdata.sql
-
 ```
 
 The database includes three tables
@@ -43,14 +38,12 @@ The database includes three tables
 This view is used in the query 
 
 ```
-
 CREATE VIEW error_log AS SELECT date(time),
                          ROUND(100.0*sum(case log.status when '200 OK' 
                          THEN 0 ELSE 1 END)/COUNT(log.status),2) AS Error_percentage 
 						             FROM log 
 						             GROUP BY date(time) 
-                         ORDER BY 2 DESC;
-                         
+                         ORDER BY 2 DESC;                     
 ```
 
 Column | Type
