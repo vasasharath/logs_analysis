@@ -30,6 +30,7 @@ def get_popular_articles():
 def get_popular_authors():
     db = psycopg2.connect(database=DBNAME)
     c = db.cursor()
+    # executing the query on database
     c.execute("""
                 SELECT authors.name, COUNT(*) AS num
                 FROM authors,articles,log
