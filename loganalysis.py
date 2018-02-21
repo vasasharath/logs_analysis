@@ -28,6 +28,7 @@ def get_popular_articles():
 
 
 def get_popular_authors():
+    # Connecting to news database
     db = psycopg2.connect(database=DBNAME)
     c = db.cursor()
     # executing the query on database
