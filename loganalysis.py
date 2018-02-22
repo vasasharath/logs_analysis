@@ -42,6 +42,7 @@ def get_popular_authors():
                 LIMIT 3;
               """)
     rows = c.fetchall()
+    # closing database connection
     db.close()
     print('\n\nThe most popular article authors of all time are\n')
     for author in rows:
