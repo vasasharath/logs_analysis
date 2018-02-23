@@ -50,6 +50,7 @@ def get_popular_authors():
 
 
 def get_error_day():
+    # Connecting to news database
     db = psycopg2.connect(database=DBNAME)
     c = db.cursor()
     c.execute("""
