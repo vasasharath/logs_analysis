@@ -53,6 +53,7 @@ def get_error_day():
     # Connecting to news database
     db = psycopg2.connect(database=DBNAME)
     c = db.cursor()
+    # executing the query on database
     c.execute("""
                SELECT *
                FROM error_log
