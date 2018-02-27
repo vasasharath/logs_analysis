@@ -60,6 +60,7 @@ def get_error_day():
                WHERE Error_percentage > 1;
               """)
     rows = c.fetchall()
+    # closing database connection
     db.close()
     print('\n\nDays with more than 1% of request that lead to an error\n')
     for result in rows:
