@@ -2,6 +2,7 @@
 
 import psycopg2
 
+# Storing the DB name to which we want to connect
 DBNAME = "news"
 
 
